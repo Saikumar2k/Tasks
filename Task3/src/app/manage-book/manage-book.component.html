@@ -1,0 +1,10 @@
+
+<h2>Manage Books</h2>
+
+<div *ngFor="let book of books" class="book-details">
+  <p>ID: {{ book.id }}, Name: {{ book.name }} |
+     <a routerLink="/view-details/{{ book.id }}">View Details</a> |
+     <button (click)="deleteBook(book.id)">Delete</button>
+  </p>
+  <br>
+</div>

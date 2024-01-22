@@ -1,0 +1,8 @@
+<h1>Product Discounts</h1>
+<ul>
+  <li *ngFor="let product of products">
+    {{ product.name }} - Price: {{ product.price }}
+    <input type="time" [(ngModel)]="product.startTime">
+    <button (click)="setDiscountStartTime(product, product.startTime)">Set Discount Start Time</button>
+  </li>
+</ul>
